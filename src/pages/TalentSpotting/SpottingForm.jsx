@@ -30,7 +30,7 @@ export default function SpottingForm() {
         role.toLowerCase().includes(query)
       );
     });
-  }, [data, searchQuery]);  
+  }, [data, searchQuery]);
 
   // Handle removing selected employee
   const handleRemoveEmployee = () => setSelectedEmployee(null);
@@ -51,14 +51,12 @@ export default function SpottingForm() {
             </p>
           </div>
 
-          {/* Search Bar */}
           <SearchBar
             value={searchQuery}
             onChange={(val) => setSearchQuery(val)}
             placeholder="Search by name, ID, department, or role..."
           />
 
-          {/* Employee List View */}
           {!selectedEmployee && (
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
               {filteredEmployees.map((emp) => (
@@ -91,6 +89,7 @@ export default function SpottingForm() {
                   label="Key Positive Traits"
                   subLabel="What makes them stand out?"
                   placeholder="Describe specific instances of leadership, innovation, or exceptional performance..."
+                  // value={selectedEmployee.positivetraits}
                   suggestions={["Strategic Vision", "Cross-functional Leadership", "Adaptability"]}
                 />
 
@@ -110,9 +109,9 @@ export default function SpottingForm() {
                   Cancel
                 </button>
                 <div className="flex items-center gap-4 w-full sm:w-auto">
-                  <button className="flex-1 sm:flex-none border border-slate-300 dark:border-slate-600 text-slate-700 dark:text-slate-200 hover:bg-slate-50 dark:hover:bg-slate-800 px-6 py-2.5 rounded-lg text-sm font-medium transition-colors shadow-sm">
+                  {/* <button className="flex-1 sm:flex-none border border-slate-300 dark:border-slate-600 text-slate-700 dark:text-slate-200 hover:bg-slate-50 dark:hover:bg-slate-800 px-6 py-2.5 rounded-lg text-sm font-medium transition-colors shadow-sm">
                     Save Draft
-                  </button>
+                  </button> */}
                   <button className="flex-1 sm:flex-none bg-primary hover:bg-blue-700 text-white px-8 py-2.5 rounded-lg text-sm font-bold shadow-md shadow-primary/20 transition-colors flex items-center justify-center gap-2">
                     <span>Submit Assessment</span>
                     <span className="material-symbols-outlined text-[18px]">send</span>

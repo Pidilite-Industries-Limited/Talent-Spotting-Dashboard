@@ -55,8 +55,8 @@ export default function TalentProfile() {
           <nav className="flex flex-wrap gap-2 items-center text-sm">
             <Link to="/" className="text-gray-500 hover:text-primary">Home</Link>
             <span className="material-symbols-outlined">chevron_right</span>
-            <Link to="/talent-spotting/screening-dashboard" className="text-gray-500 hover:text-primary">
-              Screening Dashboard
+            <Link to="/talent-spotting/talent-dashboard" className="text-gray-500 hover:text-primary">
+              Talent Dashboard
             </Link>
             <span className="material-symbols-outlined">chevron_right</span>
             <span className="font-medium">Talent Details</span>

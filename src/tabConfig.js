@@ -11,7 +11,7 @@ export const tabConfig = {
           icon: "rule",
           subtitle: "Review submissions",
         },
-        KeyTalentDashboard: {
+        TalentDashboard: {
           icon: "workspace_premium",
           subtitle: "View identified talent",
         },

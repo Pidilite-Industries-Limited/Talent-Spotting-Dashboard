@@ -2,8 +2,8 @@ import React from "react";
 import { Link, NavLink } from "react-router-dom";
 
 const menuItems = [
-  { title: "Dashboard", icon: "dashboard", path: "/talent-spotting/screening-dashboard" },
-  { title: "Talent Pool", icon: "people", path: "/talent-spotting/key-talent-dashboard" },
+  { title: "Dashboard", icon: "dashboard", path: "/talent-spotting/talent-dashboard" },
+  // { title: "Talent Pool", icon: "people", path: "/talent-spotting/key-talent-dashboard" },
   { title: "Reports", icon: "bar_chart", path: "/" },
   { title: "Settings", icon: "settings", path: "/" },
 ];

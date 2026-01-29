@@ -1,4 +1,3 @@
-import React from "react";
 import NavBar from "./NavBar";
 import Breadcrumbs from "./Breadcrumbs";
 import UserActions from "./UserActions";
@@ -10,27 +9,30 @@ function buildNavStructure(pages) {
   const navMap = {};
 
   Object.keys(pages).forEach((filePath) => {
-    const [group, tab] = filePath.replace('../pages/', '').replace('.jsx', '').split('/');
+    // if(filePath.split("/").length > 3) {
+      const [group, tab] = filePath.replace('../pages/', '').replace('.jsx', '').split('/');
 
-    if (!navMap[group]) {
-      navMap[group] = {
-        name: group,
-        label: pascalToLabel(group),
-        icon: tabConfig[group]?.icon,
-        url: pascalToUrl(group),
-        tabs: [],
-      };
+      if (!navMap[group]) {
+        navMap[group] = {
+          name: group,
+          label: pascalToLabel(group),
+          icon: tabConfig[group]?.icon,
+          url: pascalToUrl(group),
+          tabs: [],
+        };
+      }
+
+      navMap[group].tabs.push({
+        name: tab,
+        label: pascalToLabel(tab),
+        subtitle: tabConfig[group]?.tabs?.[tab]?.subtitle,
+        icon: tabConfig[group]?.tabs?.[tab]?.icon,
+        url: pascalToUrl(tab),
+        importFn: pages[filePath],
+      });
     }
-
-    navMap[group].tabs.push({
-      name: tab,
-      label: pascalToLabel(tab),
-      subtitle: tabConfig[group]?.tabs?.[tab]?.subtitle,
-      icon: tabConfig[group]?.tabs?.[tab]?.icon,
-      url: pascalToUrl(tab),
-      importFn: pages[filePath],
-    });
-  });
+  //  }
+  );
 
   return Object.values(navMap);
 }
@@ -42,7 +44,7 @@ export default function Header() {
     <header className="sticky top-0 z-50 bg-white dark:bg-slate-900 border-b border-slate-200 dark:border-slate-700 shadow-sm">
       <div className="flex items-center justify-between px-6 py-3">
         <NavBar navStructure={navStructure} />
-        {UserActions && <UserActions />}
+        <UserActions/>
       </div>
       <Breadcrumbs navStructure={navStructure} />
     </header>

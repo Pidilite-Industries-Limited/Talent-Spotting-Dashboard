@@ -17,7 +17,7 @@ export default function EmployeeTile({ emp }) {
   
     return (
       <div className="group relative flex flex-col rounded-xl border border-slate-200 bg-white p-5 shadow-sm transition-all hover:-translate-y-1 hover:shadow-md dark:border-slate-700 dark:bg-slate-800">
-          {emp.key && (
+          {/* {emp.key && (
           <div className="absolute left-4 top-4 flex items-center justify-center rounded-full bg-primary p-1 text-white">
             <span className="material-symbols-outlined text-[16px]">key</span>
           </div>
@@ -26,7 +26,7 @@ export default function EmployeeTile({ emp }) {
             <span className={`inline-flex items-center rounded-full px-2 py-1 text-xs font-medium ${tagColorClass}`}>
               {emp.tag}
             </span>
-          </div>
+          </div> */}
           <div className="flex flex-col items-center">
             <div className="h-20 w-20 overflow-hidden rounded-full border-4 border-slate-50 dark:border-slate-700 bg-cover bg-center" style={{ backgroundImage: `url(${emp.avatar})` }}></div>
             <h3 className="mt-4 text-lg font-bold text-slate-900 dark:text-white">{emp.name}</h3>

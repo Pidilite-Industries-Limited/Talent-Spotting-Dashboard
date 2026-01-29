@@ -1,4 +1,3 @@
-import { data } from "../data";
 import SearchBar from "./SearchBar";
 
 export default function FilterBar({

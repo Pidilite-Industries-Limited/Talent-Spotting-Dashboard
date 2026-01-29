@@ -55,7 +55,7 @@ export default function EmployeeCard({ employee, onRemove, hideHeader = false })
           <p className="text-slate-600 dark:text-slate-300 text-sm font-medium">{employee.role} | {employee.department}</p>
           <div className="flex items-center gap-4 mt-2 text-xs text-slate-500 dark:text-slate-400">
             <span className="flex items-center gap-1"><span className="material-symbols-outlined text-[16px]">badge</span>{employee.id}</span>
-            <span className="flex items-center gap-1"><span className="material-symbols-outlined text-[16px]">event</span>{employee.doj}</span>
+            <span className="flex items-center gap-1"><span className="material-symbols-outlined text-[16px]">event</span>{new Date(employee.doj).toISOString().slice(0, 10)}</span>
             <span className="flex items-center gap-1"><span className="material-symbols-outlined text-[16px]">location_on</span>{employee.location}</span>
           </div>
         </div>
