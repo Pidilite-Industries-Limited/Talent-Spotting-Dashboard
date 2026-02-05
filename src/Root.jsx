@@ -10,7 +10,7 @@ const LoginPage = lazy(() => import("./Login.jsx"));
 export default function Root() {
   return (
     <AuthProvider>
-      <BrowserRouter>
+      <BrowserRouter basename={process.env.BASENAME}>
         <Routes>
           <Route
             path="/login"

@@ -23,7 +23,7 @@ function NavGroup({ group, activeGroup, activeTab }) {
       <button
         type="button"
         className={`flex items-center gap-1 px-4 py-2 text-sm font-medium rounded-lg transition-colors 
-          ${isActiveGroup ? "bg-primary/20 text-primary dark:text-sky-500 bg-sky-100 dark:bg-slate-700" : "text-slate-700 dark:text-slate-300 hover:bg-slate-200 dark:hover:bg-slate-600"}`}>
+          ${isActiveGroup ? "bg-primary/20 text-primary dark:text-sky-400 bg-sky-100 dark:bg-slate-700" : "text-slate-700 dark:text-slate-300 hover:bg-slate-200 dark:hover:bg-slate-600"}`}>
         {group.icon && <span className="material-symbols-outlined text-[20px]">{group.icon}</span>}
         {group.label}
         <span className="material-symbols-outlined text-[16px]">expand_more</span>

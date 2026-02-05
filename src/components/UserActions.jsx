@@ -67,7 +67,7 @@ export default function UserActions() {
         <div className="w-px h-6 bg-slate-200 dark:bg-slate-600" />
 
         <button data-href="/logout" onClick={handleLogout}
-        className="flex items-center gap-2 rounded-lg bg-red-400 px-4 py-2 text-sm font-medium text-white shadow-sm hover:bg-red-700 transition-colors">
+        className="flex items-center gap-2 rounded-lg hover:bg-red-400 px-4 py-2 text-sm font-medium text-white shadow-sm bg-red-700 transition-colors">
           Logout
         </button>
       </div>

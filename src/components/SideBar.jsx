@@ -10,7 +10,7 @@ const menuItems = [
 
 export default function SideBar() {
   return (
-    <aside className="w-64 bg-white dark:bg-slate-900 border-r border-slate-200 dark:border-slate-700 flex flex-col h-full p-4">
+    <aside className="w-64 bg-white dark:bg-slate-900 border-r border-slate-200 dark:border-slate-700 flex flex-col h-full p-4 hidden md:block">
       <div className="mb-8 flex items-center justify-center text-2xl font-bold text-primary dark:text-white">
       <Link to="/" className="flex items-center gap-3 hover:opacity-80 transition-opacity">
         <img
